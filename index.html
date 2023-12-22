@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
     
+    <title>Home</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    
+    <script></script>
+    <script></script>
+</head>
+
+<body>
+    <a href="register.html">REGISTER</a>
+    <h1>Index Landing Login</h1>
+    <fieldset>
+        <legend>LOGIN</legend>
+        <label>
+            <div class="name">Username:</div><input id="username">
+        </label>
+        <label>
+            <div class="name">Password:</div><input id="password" type="password"> 
+        </label>
+        <label>
+            <div class="name">:</div><input type="button" value="LOGIN" id="loginButton">
+        </label>
+    </fieldset>
 </body>
+
+<script src="await.js"></script>
+
+<script>
+    loginButton.addEventListener("click", async => {
+        token = await api.login({ username: username.value, password: password.value });
+        window.location = "posts"
+    });
+</script>
+
 </html>
