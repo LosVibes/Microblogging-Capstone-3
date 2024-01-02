@@ -20,7 +20,16 @@
        <select name="userList" id="userList">
         <option value="">--Select user name--</option>
        </select> 
-       <div class="card" id="Result">
+       <div class="card" id="Result"></div>
+
+       <fieldset id="message">
+        <legend>New Post</legend>
+        <label>
+            <input id="message" value="" placeholder="Message Text">
+            <input type="button" value="POST" onclick="post(message.value)">
+        </label>
+       </fieldset>
+      
 
        </div>
      
