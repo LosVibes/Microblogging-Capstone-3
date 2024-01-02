@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>POSTS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="posts.css">
+
+    <script src="auth2.js"></script>
+    <script src="posts.js"></script>
+</head>
+
+<body>
+    <img src="./logo.png" alt="logo">
+    <a href="./indexLL.html">LOGOUT</a>
+    <fieldset id="messageTemplate">
+        <legend>New Post</legend>
+        <label>
+            <input value="" id="message" placeholder="message text">
+            <input type="button" value="POST" onclick="post(message.value)">
+        </label>
+    </fieldset>
+
+    <h1>POSTS</h1>
+    <select id="userList">
+        <option value="">Select a user to filter posts</option>
+    </select>
+    <div id="results"></div>
+</body>
+
+</html>

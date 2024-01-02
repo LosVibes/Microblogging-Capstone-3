@@ -1,0 +1,25 @@
+.gradient-custom-2 {
+    background: linear-gradient(to right, #3498db, #ffffff);
+}  
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }
+    .btn-custom-blue {
+        background-color: #3498db;
+        border-color: #3498db; 
+        color: #ffffff;
+    }
+    h4.custom-text-color {
+        color: black;
+    }
+h4 mt-1 mb-5 pb-1{
+    font-family: ru;
+}
