@@ -5,3 +5,12 @@ h1{
     text-align: center;
     text-decoration: underline;
 }
+.from-container{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+form{
+    width: 50%;
+}
