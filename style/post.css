@@ -1,0 +1,13 @@
+body{
+    background-color: bisque;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+.container{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
