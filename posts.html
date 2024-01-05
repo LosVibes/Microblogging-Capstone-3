@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/posts.css">
+    <title>Posts</title>
+    <script src="./microblog lite starter/auth.js"></script>
+    <script src="./scripts/posts2.js"></script>
+    <script src="./scripts/demo copy.js"></script>
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <img id="logoGo" src="/Images/CGL2.png" alt="logo">
+            <h1>POSTS</h1>
+            <a class="navbarLogout" href="/index copy.html">
+                LOGOUT
+            </a>
+        </div>
+    </nav>
+    <video autoplay muted loop id="myVideo">
+        <source src="/Images/Chao garden background 1.mp4" type="video/mp4">
+    </video>
+        <fieldset id="messageTemplate">
+            <legend>What's on your mind?</legend>
+            <label>
+                <input id="message" value="" placeholder="">
+                <input type="button" value="POST" onclick="postPost(message.value)">
+            </label>
+        </fieldset>
+    <div id="userPost">
+        <br>
+        <div id="userListBox">
+            <select name="userList" id="userList" title="user list">
+                <option value="">--Select user name--</option>
+                <option value="">--Select All--</option>
+            </select>
+        </div>
+        <br>
+        <div id="result"></div>
+
+    </div>
+    </div>
+</body>
+
+</html>
