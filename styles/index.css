@@ -18,8 +18,23 @@
         color: #ffffff;
     }
     h4.custom-text-color {
-        color: black;
-    }
+        font-family: 'Rubik Bubbles', serif;
+        font-size: 500%;
+        color: white;
+        text-align: center;
+        text-shadow: .1em .01em .01em #000000;
+        -webkit-text-stroke: 1px #000000;    }
 h4 mt-1 mb-5 pb-1{
-    font-family: ru;
+    font-family: 'Rubik Bubbles', serif;
+}
+#myVideo {
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+#form{
+    box-shadow: .1em 1em 1em .2em #000000; 
 }
