@@ -3,12 +3,11 @@
 document.addEventListener("DOMContentLoaded", async () => {
 
   const input = {
-    "username": "Lion",
-    "password": "Lion"
+    "username": "username",
+    "password": "password"
   };
 
   const host = "http://microbloglite.us-east-2.elasticbeanstalk.com";
-  token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikxpb24iLCJpYXQiOjE3MDQzOTA2ODcsImV4cCI6MTcwNDQ3NzA4N30.YNjDuVCp_eVwAwITKvretyRKNxRObO8w4xEG_rJVa04";
   try {
     const response = await fetch(`${host}/auth/login`, {
       method: "POST",
@@ -64,14 +63,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       result.innerHTML += `
         
           <fieldset id="messageTemplate">
-            <legend>Message Template</legend>
+            <legend>${post.username}</legend>
             <label>
               <div class ="post">
-                Username: ${post.username} <br>
-                TEXT : ${post.text} <br>
+              <img src="./Images/logo.png" alt="lilGuy" style="width:2em;"> ${post.text} <br>
                 ${post.likes.length} likes
               </div>
             </label>
+            <br>
             <label>
               <div class ="post"></div>
               <input type="button" value="LIKE" onclick="likePost('${post._id}')">
