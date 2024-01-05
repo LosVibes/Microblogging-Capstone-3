@@ -2,8 +2,8 @@
 
 
 function login() {
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
 
     fetch('https://microbloglite.onrender.com/auth/login', {
         method: 'POST',
@@ -19,6 +19,7 @@ function login() {
         .then(data => {
             console.log(data);
             localStorage.token = data.token
+            window.location.href = 'posts.html';
         })
         .catch(error => {
             console.error('Error:', error);
