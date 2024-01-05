@@ -1,23 +1,67 @@
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4;
-    background-image: url('../Images/back.png'); 
-    background-size: cover;
-    background-position: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  background-image: url('../Images/back.png'); 
+  background-size: cover;
+  background-position: center;
+  font-family: 'Rubik Bubbles', serif;
+}
+.card {
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 5); 
+  background-color: #fff;
+}
+.form-group {
+  margin-bottom: 20px;
+}
 
-  .card {
-    width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 5); 
-    background-color: #fff;
-  }
+label {
+  display: block;
+  margin-bottom: 8px;
+}
 
+<<<<<<< HEAD:register/register.css
+input {
+  width: calc(100% - 200px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Rubik Bubbles', serif;
+}
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Rubik Bubbles', serif;
+}
+.logo{
+  padding: 10px 50px;
+}
+input.error {
+  border: 1px solid red;
+}
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+  display: block;
+}
+#formErrorMessage {
+  color: red;
+  font-size: 1em;
+  margin-bottom: 10px;
+  display: block;
+}
+=======
   .form-group {
     margin-bottom: 20px;
   }
@@ -54,3 +98,4 @@ body {
     min-width: 100%;
     min-height: 100%;
 } */
+>>>>>>> main:styles/register copy.css
