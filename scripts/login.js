@@ -5,7 +5,7 @@ function login() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
 
-    fetch('https://microbloglite.onrender.com/auth/login', {
+    fetch('http://microbloglite.us-east-2.elasticbeanstalk.com/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -19,6 +19,8 @@ function login() {
         .then(data => {
             console.log(data);
             localStorage.token = data.token
+            localStorage.username = data.username;
+            window.location = "../posts.html";
         })
         .catch(error => {
             console.error('Error:', error);

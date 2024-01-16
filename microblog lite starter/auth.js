@@ -2,7 +2,7 @@
 
 "use strict";
 
-const apiBaseURL = "https://microbloglite.herokuapp.com";
+const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com";
 // Backup server:   https://microbloglite.onrender.com
 
 // You can use this function to get the login data of the logged-in
@@ -43,7 +43,10 @@ function login (loginData) {
         .then(response => response.json())
         .then(loginData => {
             window.localStorage.setItem("login-data", JSON.stringify(loginData));
-            window.location.assign("/posts");  // redirect
+            localStorage.token = loginData.token;
+            localStorage.username = loginData.username;
+            // window.location.assign("/posts");  // redirect
+            window.location = "../posts.html"
 
             return loginData;
         });

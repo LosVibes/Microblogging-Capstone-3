@@ -2,32 +2,32 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-  const input = {
-    "username": "Lion",
-    "password": "Lion"
-  };
+  // const input = {
+  //   "username": "Lion",
+  //   "password": "Lion"
+  // };
 
   const host = "http://microbloglite.us-east-2.elasticbeanstalk.com";
-  token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikxpb24iLCJpYXQiOjE3MDQzOTA2ODcsImV4cCI6MTcwNDQ3NzA4N30.YNjDuVCp_eVwAwITKvretyRKNxRObO8w4xEG_rJVa04";
+  // token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikxpb24iLCJpYXQiOjE3MDQzOTA2ODcsImV4cCI6MTcwNDQ3NzA4N30.YNjDuVCp_eVwAwITKvretyRKNxRObO8w4xEG_rJVa04";
   try {
-    const response = await fetch(`${host}/auth/login`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(input)
-    });
+    // const response = await fetch(`${host}/auth/login`, {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify()
+    // });
 
-    if (!response.ok) {
-      throw new Error('Login failed');
-    }
+    // if (!response.ok) {
+    //   throw new Error('Login failed');
+    // }
 
-    const output = await response.json();
-    const token = output.token;
-    localStorage.token = output.token;
+    // const output = await response.json();
+    // const token = output.token;
+    // localStorage.token = output.token;
 
     // Fetch users and populate userList
     const usersResponse = await fetch(`${host}/api/users?limit=1000`, {
       method: "GET",
-      headers: { 'Authorization': `Bearer ${token}` }
+      headers: { 'Authorization': `Bearer ${localStorage.token}` }
     });
 
     if (!usersResponse.ok) {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Fetch and display posts
     const postsResponse = await fetch(`${host}/api/posts`, {
       method: "GET",
-      headers: { 'Authorization': `Bearer ${token}` }
+      headers: { 'Authorization': `Bearer ${localStorage.token}` }
     });
 
     if (!postsResponse.ok) {
